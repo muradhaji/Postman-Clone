@@ -24,23 +24,25 @@
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="buttons.css">
     <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="rightmenu.css">
     <link rel="stylesheet" href="footer.css">
 
 </head>
 
 <body class="vh-100 d-flex flex-column">
 
-    <header>
-        <div class="topHeader d-flex gap-2 p-2">
+    <header class="d-flex flex-column gap-2 p-2">
+        <div class="topHeader d-flex gap-2">
             <a href="#" class="text-dark text-decoration-none">File</a>
             <a href="#" class="text-dark text-decoration-none">Edit</a>
             <a href="#" class="text-dark text-decoration-none">View</a>
             <a href="#" class="text-dark text-decoration-none">Help</a>
         </div>
-        <div class="mainHeader d-flex justify-content-between p-2">
+        <div class="mainHeader d-flex justify-content-between">
             <div class="leftGroup d-flex gap-2">
                 <a href="#" class="btn border-0 hoverBgLightGray">Home</a>
 
@@ -89,15 +91,106 @@
     </header>
 
     <main class="flex-fill d-flex flex-row">
-        <aside class="sidebar">
-            <h1>Sidebar</h1>
+        <aside class="sidebar d-flex flex-column">
+            <div class="header d-flex justify-content-between align-items-center p-2">
+                <h6 class="m-0">History</h6>
+                <div class="buttons">
+                    <button class="btn bgLightGray p-1 inter-5">New</button>
+                    <button class="btn bgLightGray p-1 inter-5">Import</button>
+                </div>
+            </div>
+            <div class="content p-2 flex-fill">
+                <div class="searchBar d-flex align-items-center gap-2">
+                    <div class="search flex-fill">
+                        <div class="input-group">
+                            <span class="input-group-text" id="search-icon">
+                                <i class="bi bi-filter"></i>
+                            </span>
+                            <input type="search" class="form-control" aria-label="Search"
+                                aria-describedby="search-icon">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div id="saveResponsesDropdown" class="dropdown">
+                            <button class="btn border-0 hoverBgLightGray px-2" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-start p-2">
+                                <div
+                                    class="form-check form-switch d-flex align-items-center gap-2 mb-0 p-2 hoverBgLightGray rounded-1 cursor-pointer">
+                                    <label class="form-check-label text-nowrap order-1 cursor-pointer"
+                                        for="saveResponesSwitch">Save
+                                        Responses</label>
+                                    <input class="form-check-input order-2 cursor-pointer" type="checkbox"
+                                        id="saveResponesSwitch">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="emptyContent d-flex flex-column gap-3 align-items-center py-5 px-2">
+                    <img src="images/illustration-no-history.svg" alt="Empty Image">
+                    <h6>Time to send your first request</h6>
+                    <p class="text-center">All the requests you send will be stored in History. Sign in or create an
+                        account to organize
+                        them in collections.</p>
+                    <a href="#" class="inter-5">Show me how</a>
+                </div>
+            </div>
+            <div class="footer d-flex gap-3 align-items-start p-3">
+                <img class="bgLightGray p-2 rounded-1" src="images/aether.svg" alt="Icon">
+                <div>
+                    <h6>Create collections in Postman</h6>
+                    <p>Use collections to save your requests and share them with others.</p>
+                    <button class="btn">Create a collection</button>
+                </div>
+            </div>
         </aside>
-        <section class="requests">
-            <h1>Requests</h1>
+        <section class="rightMenu flex-fill d-flex flex-column align-items-stretch">
+            <div class="tabContainer d-flex">
+                <div class="tabs d-flex">
+                    <div class="tab p-2 d-flex align-items-center gap-2">
+                        <span class="method colorGet inter-6">GET</span>
+                        <span class="title flex-fill">Untitled Request</span>
+                        <button class="closeRequest btn hoverBgLightGray">
+                            <i class="bi bi-x"></i>
+                        </button>
+                    </div>
+                    <div class="tab p-2 d-flex align-items-center gap-2 active">
+                        <span class="method colorGet inter-6">GET</span>
+                        <span class="title flex-fill">Untitled Request</span>
+                        <button class="closeRequest btn hoverBgLightGray">
+                            <i class="bi bi-x"></i>
+                        </button>
+                    </div>
+                    <div class="tab p-2 d-flex align-items-center gap-2">
+                        <span class="method colorGet inter-6">GET</span>
+                        <span class="title flex-fill">Untitled Request</span>
+                        <button class="closeRequest btn hoverBgLightGray">
+                            <i class="bi bi-x"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="actions d-flex flex-fill p-1">
+                    <button class="addRequest btn hoverBgLightGray">
+                        <i class="bi bi-plus"></i>
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn border-0 hoverBgLightGray px-2" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-three-dots"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end p-2">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="d-flex justify-content-between p-2">
+    <footer class="d-flex justify-content-between py-1 px-2">
         <div class="leftGroup d-flex gap-3">
             <a href="#" class="hideSidebarButton">
                 <i class="bi bi-layout-text-sidebar"></i>
@@ -129,6 +222,12 @@
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
     <script src="tooltips.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('saveResponsesDropdown').addEventListener('click', (e) => { e.stopPropagation() })
+        })
+    </script>
 
 </body>
 

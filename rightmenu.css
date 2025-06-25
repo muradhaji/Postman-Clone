@@ -1,0 +1,46 @@
+body>main>section.rightMenu {}
+
+body>main>section.rightMenu>div.tabContainer {}
+
+body>main>section.rightMenu>div.tabContainer>div.tabs {}
+
+body>main>section.rightMenu>div.tabContainer>div.tabs>div.tab {
+    min-width: 180px;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+body>main>section.rightMenu>div.tabContainer>div.tabs>div.tab.active {
+    border-bottom: none;
+    border-top: 2px solid rgb(255, 108, 55);
+}
+
+body>main>section.rightMenu>div.tabContainer>div.tabs>div.tab>span.method {
+    font-size: 9px;
+}
+
+body>main>section.rightMenu>div.tabContainer>div.tabs>div.tab>span.title {
+    font-size: 11px;
+}
+
+body>main>section.rightMenu>div.tabContainer>div.tabs>div.tab>button.closeRequest {
+    padding: 0px 6px;
+}
+
+body>main>section.rightMenu>div.tabContainer>div.actions {
+    border-bottom: 1px solid lightgray;
+}
+
+body>main>section.rightMenu>div.tabContainer>div.actions>button.addRequest {
+    padding: 4px 8px;
+}
+
+body>main>section.rightMenu>div.tabContainer>div.actions>div.dropdown {}
+
+body>main>section.rightMenu>div.tabContainer>div.actions>div.dropdown>button {
+    padding: 4px 8px;
+}
+
+.colorGet {
+    color: rgb(0, 127, 49);
+}

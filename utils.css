@@ -9,3 +9,7 @@
 .hoverBgLightGray:hover {
     background-color: rgb(242, 242, 242) !important;
 }
+
+.cursor-pointer {
+    cursor: pointer !important;
+}

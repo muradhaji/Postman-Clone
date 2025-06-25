@@ -2,10 +2,15 @@ body {}
 
 body>header {}
 
-body>main {}
+body>main {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
 
-body>main>aside.sidebar {}
+body>main>aside.sidebar {
+    max-width: 400px;
+}
 
-body>main>section.requests {}
+body>main>section.rightMenu {}
 
 body>footer {}
