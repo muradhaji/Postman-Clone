@@ -1,0 +1,28 @@
+header {}
+
+header>div.topHeader {}
+
+header>div.topHeader>a {
+    font-size: 0.9rem;
+}
+
+header>div.mainHeader {}
+
+header>div.mainHeader>div.leftGroup {}
+
+header>div.mainHeader>div.leftGroup>a {}
+
+header>div.mainHeader>div.leftGroup>div.dropdown {}
+
+header>div.mainHeader>div.searchContainer {
+    background-color: rgb(242, 242, 242);
+    border-radius: 4px;
+    cursor: text;
+    font-size: 14px;
+}
+
+header>div.mainHeader>div.rightGroup {}
+
+header>div.mainHeader>div.rightGroup>div.dropdown {}
+
+header>div.mainHeader>div.rightGroup>a {}

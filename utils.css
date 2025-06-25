@@ -1,0 +1,11 @@
+.bgLightGray {
+    background-color: rgb(242, 242, 242) !important;
+}
+
+.bgLightGray:hover {
+    background-color: rgb(230, 230, 230) !important;
+}
+
+.hoverBgLightGray:hover {
+    background-color: rgb(242, 242, 242) !important;
+}
