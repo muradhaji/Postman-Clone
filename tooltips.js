@@ -11,3 +11,17 @@ tippy('.layoutButton', {
     animation: 'fade',
     theme: 'tooltipTheme'
 });
+
+tippy('.rightBarCodeButton', {
+    content: 'Code',
+    placement: 'left',
+    animation: 'fade',
+    theme: 'tooltipTheme'
+});
+
+tippy('.rightBarTemplatesButton', {
+    content: 'Templates',
+    placement: 'left',
+    animation: 'fade',
+    theme: 'tooltipTheme'
+});

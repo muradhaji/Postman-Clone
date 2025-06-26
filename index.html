@@ -48,12 +48,20 @@
 
                 <div class="dropdown ">
                     <button class="btn btn-light dropdown-toggle bg-transparent border-0 shadow-none hoverBgLightGray"
-                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                         Workspaces
                     </button>
                     <div class="dropdown-menu">
-                        Workspaces context
-                        <!-- Note: create later -->
+                        <div class="d-flex flex-column gap-2">
+                            <img class="align-self-center" src="images/workspacesdropdown.svg" alt="Image">
+                            <h5>Sign up to organize your work</h5>
+                            <p>You are currently using the lightweight API Client. Sign in or create an account to
+                                organize your requests into collections and workspaces.</p>
+                            <div class="buttons d-flex gap-2">
+                                <button class="btn bgLightGray">Sign In</button>
+                                <button class="btn bgOrange">Create Free Account</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -72,20 +80,22 @@
                         <i class="bi bi-gear"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-end p-2">
-                        <button class="btn btn-light w-100 text-start text-nowrap">Settings</button>
-                        <button class="btn btn-light w-100 text-start text-nowrap">Release Notes</button>
-                        <button class="btn btn-light w-100 text-start text-nowrap">Learning Center</button>
-                        <button class="btn btn-light w-100 text-start text-nowrap">Support Center</button>
-                        <button class="btn btn-light w-100 text-start text-nowrap">Security</button>
-                        <button class="btn btn-light w-100 text-start text-nowrap">Privacy Policy</button>
-                        <button class="btn btn-light w-100 text-start text-nowrap">Terms</button>
-                        <button class="btn btn-light w-100 text-start text-nowrap">@getpostman</button>
+                        <div class="d-flex flex-column gap-1">
+                            <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Settings</button>
+                            <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Release Notes</button>
+                            <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Learning Center</button>
+                            <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Support Center</button>
+                            <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Security</button>
+                            <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Privacy Policy</button>
+                            <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Terms</button>
+                            <button class="btn hoverBgLightGray w-100 text-start text-nowrap">@getpostman</button>
+                        </div>
                     </div>
                 </div>
 
                 <a href="#" class="btn bgLightGray">Sign in</a>
 
-                <a href="#" class="btn btn-warning text-white">Create Account</a>
+                <a href="#" class="btn bgOrange text-white">Create Account</a>
             </div>
         </div>
     </header>
@@ -113,7 +123,7 @@
                     <div class="button">
                         <div id="saveResponsesDropdown" class="dropdown">
                             <button class="btn border-0 hoverBgLightGray px-2" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                                data-bs-auto-close="outside" aria-expanded="false">
                                 <i class="bi bi-three-dots"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-start p-2">
@@ -151,21 +161,21 @@
             <div class="tabContainer d-flex">
                 <div class="tabs d-flex">
                     <div class="tab p-2 d-flex align-items-center gap-2">
-                        <span class="method colorGet inter-6">GET</span>
+                        <span class="method getMethodColor inter-6">GET</span>
                         <span class="title flex-fill">Untitled Request</span>
                         <button class="closeRequest btn hoverBgLightGray">
                             <i class="bi bi-x"></i>
                         </button>
                     </div>
                     <div class="tab p-2 d-flex align-items-center gap-2 active">
-                        <span class="method colorGet inter-6">GET</span>
+                        <span class="method getMethodColor inter-6">GET</span>
                         <span class="title flex-fill">Untitled Request</span>
                         <button class="closeRequest btn hoverBgLightGray">
                             <i class="bi bi-x"></i>
                         </button>
                     </div>
                     <div class="tab p-2 d-flex align-items-center gap-2">
-                        <span class="method colorGet inter-6">GET</span>
+                        <span class="method deleteMethodColor inter-6">Delete</span>
                         <span class="title flex-fill">Untitled Request</span>
                         <button class="closeRequest btn hoverBgLightGray">
                             <i class="bi bi-x"></i>
@@ -178,13 +188,162 @@
                     </button>
                     <div class="dropdown">
                         <button class="btn border-0 hoverBgLightGray px-2" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                            data-bs-auto-close="outside" aria-expanded="false">
                             <i class="bi bi-three-dots"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-end p-2">
-
+                            <div class="d-flex flex-column gap-1">
+                                <div class="dropdown dropend recentlyClosedTabs">
+                                    <button class="dropdown-toggle btn hoverBgLightGray w-100 text-start" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Recently Closed Tabs
+                                    </button>
+                                    <div class="dropdown-menu p-2">
+                                        <div class="d-flex flex-column gap-1">
+                                            <button class="btn hoverBgLightGray recentClosedRequest w-100">
+                                                <span class="method getMethodColor inter-6">GET</span>
+                                                <span class="title">Untitled Request</span>
+                                            </button>
+                                            <button class="btn hoverBgLightGray recentClosedRequest w-100">
+                                                <span class="method getMethodColor inter-6">GET</span>
+                                                <span class="title">Untitled Request</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Duplicate Selected
+                                    Tab</button>
+                                <hr class="dropdown-divider">
+                                <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Close Selected
+                                    Tab</button>
+                                <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Force Close Selected
+                                    Tab</button>
+                                <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Close All but Selected
+                                    Tab</button>
+                                <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Close All
+                                    Tabs</button>
+                                <button class="btn hoverBgLightGray w-100 text-start text-nowrap">Force Close All
+                                    Tabs</button>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="d-flex flex-fill">
+                <div class="requestArea d-flex flex-column flex-fill">
+                    <div class="requestContainer flex-fill p-2 d-flex flex-column gap-3">
+                        <div class="header d-flex justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="requestType">
+                                    <img src="images/http.svg" alt="Request Type">
+                                </div>
+                                <p class="requestTitle inter-6 mb-0">Untitled Request</p>
+                            </div>
+                            <button class="btn hoverBgLightGray d-flex align-items-center gap-2 p-1">
+                                <img src="images/save.svg" alt="Save Button">
+                                <span class="text-secondary">Save</span>
+                            </button>
+                        </div>
+                        <div class="searchBar d-flex gap-2">
+                            <div class="searchBox flex-fill d-flex rounded-2">
+                                <div class="methodInput">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control border-0 getMethodColor" value="GET">
+                                        <button class="btn dropdown-toggle border-0 shadow-none" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                        <div class="dropdown-menu dropdown-menu-end p-2">
+                                            <div class="d-flex flex-column">
+                                                <button
+                                                    class="btn hoverBgLightGray getMethodColor p-1 rounder-1 text-start">GET</button>
+                                                <button
+                                                    class="btn hoverBgLightGray postMethodColor p-1 rounder-1 text-start">POST</button>
+                                                <button
+                                                    class="btn hoverBgLightGray putMethodColor p-1 rounder-1 text-start">PUT</button>
+                                                <button
+                                                    class="btn hoverBgLightGray patchMethodColor p-1 rounder-1 text-start">PATCH</button>
+                                                <button
+                                                    class="btn hoverBgLightGray deleteMethodColor p-1 rounder-1 text-start">DELETE</button>
+                                                <button
+                                                    class="btn hoverBgLightGray headMethodColor p-1 rounder-1 text-start">HEAD</button>
+                                                <button
+                                                    class="btn hoverBgLightGray optionsMethodColor p-1 rounder-1 text-start">OPTIONS</button>
+                                            </div>
+                                            <hr class="dropdown-divider">
+
+                                            <p class="text-secondary p-2 mb-0">Type a new method</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="urlInput flex-fill">
+                                    <input type="text" class="form-control border-0"
+                                        placeholder="Enter URL or paste text">
+                                </div>
+                            </div>
+                            <div class="action">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary">Send</button>
+                                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="visually-hidden">Send Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu p-2">
+                                        <button class="btn hoverBgLightGray text-nowrap p-2">Send and Download</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="parameterTabs d-flex gap-4">
+                            <a href="#" class="parameterTab inter-4 text-nowrap active">Params</a>
+                            <a href="#" class="parameterTab inter-4 text-nowrap">Authorization</a>
+                            <a href="#" class="parameterTab inter-4 text-nowrap">Headers</a>
+                            <a href="#" class="parameterTab inter-4 text-nowrap">Body</a>
+                            <a href="#" class="parameterTab inter-4 text-nowrap">Pre-request Script</a>
+                            <a href="#" class="parameterTab inter-4 text-nowrap">Tests</a>
+                            <a href="#" class="parameterTab inter-4 text-nowrap">Settings</a>
+                            <span class="flex-fill"></span>
+                            <a href="#" class="cookiesTab">Cookies</a>
+                        </div>
+                        <div class="tabContentContainer">
+                            <div class="paramsTabContent">
+                                <h6 class="tabHeader">Query Params</h6>
+                                <div class="tabContent">
+                                    <table class="w-100">
+                                        <tr>
+                                            <th style="min-width: 48px;"></th>
+                                            <th class="w-50">Key</th>
+                                            <th class="w-50">Value</th>
+                                            <th class="text-nowrap">
+                                                <button class="btn p-0">Bulk Edit</button>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Key</td>
+                                            <td colspan="2">Value</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="responseContainer p-2 d-flex flex-column">
+                        <div class="header d-flex justify-content-between text-secondary cursor-pointer">
+                            <p>Response</p>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="content flex-fill">
+                            <div
+                                class="emptyContent d-flex flex-column align-items-center justify-content-middle gap-4">
+                                <img src="images/emptyresponse.svg" alt="Empty">
+                                <p class="text-secondary">Enter the URL and click Send to get a response</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightSidebar d-flex flex-column gap-2 p-2">
+                    <button class="btn hoverBgLightGray rightBarCodeButton"><i class="bi bi-code-slash"></i></button>
+                    <button class="btn hoverBgLightGray rightBarTemplatesButton"><img src="images/templates.svg"
+                            alt="Templates"></button>
                 </div>
             </div>
         </section>
@@ -222,12 +381,6 @@
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
     <script src="tooltips.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('saveResponsesDropdown').addEventListener('click', (e) => { e.stopPropagation() })
-        })
-    </script>
 
 </body>
 

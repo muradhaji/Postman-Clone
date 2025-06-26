@@ -14,6 +14,28 @@ header>div.mainHeader>div.leftGroup>a {}
 
 header>div.mainHeader>div.leftGroup>div.dropdown {}
 
+header>div.mainHeader>div.leftGroup>div.dropdown>.dropdown-menu {
+    width: 360px;
+    padding: 24px;
+}
+
+header>div.mainHeader>div.leftGroup>div.dropdown>.dropdown-menu h5 {
+    font-size: 18px;
+}
+
+header>div.mainHeader>div.leftGroup>div.dropdown>.dropdown-menu img {
+    width: 140px;
+}
+
+header>div.mainHeader>div.leftGroup>div.dropdown>.dropdown-menu p {
+    font-size: 12px;
+    text-align: justify;
+}
+
+header>div.mainHeader>div.leftGroup>div.dropdown>.dropdown-menu button {
+    font-size: 12px !important;
+}
+
 header>div.mainHeader>div.searchContainer {
     background-color: rgb(242, 242, 242);
     border-radius: 4px;
